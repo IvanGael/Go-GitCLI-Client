@@ -23,8 +23,8 @@ func NewGitRepo(path string) (*models.GitRepo, error) {
 }
 
 // DecodeObject decodes the object content stored in the Git repository
+// In a real Git implementation, you would handle various object types (blob, tree, commit, etc.)
 func DecodeObject(content []byte) (string, error) {
-	// In a real Git implementation, you would handle various object types (blob, tree, commit, etc.)
 	// Here, we assume that the content is already decoded (e.g., a commit object)
 	return string(content), nil
 }
